@@ -6,7 +6,7 @@ from .models import *
 
 class MovieAdmin(admin.ModelAdmin):
     list_display = ('movieid', 'title', 'year', 'image'
-                    # , 'is_published'
+                     , 'is_published'
                     )
     list_display_links = ('movieid', 'title')
     search_fields = ('title', 'year')
@@ -20,7 +20,7 @@ class CelebritiesAdmin(admin.ModelAdmin):
     list_display = ('name', )
     list_filter = ('name', )
     date_hierarchy = 'date_of_birth'
-#     readonly_fields = ('name',)
+
 
 
 admin.site.register(Celebrities)

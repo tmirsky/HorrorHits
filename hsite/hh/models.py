@@ -33,7 +33,7 @@ class Celebrities(models.Model):
     name = models.CharField(max_length=50, primary_key=True, verbose_name='Полное имя')
     date_of_birth = models.DateField(blank=False, null=True, verbose_name='Дата рождения')
     place = models.CharField(max_length=500, null=True, verbose_name='Страна')
-    overview = models.CharField(max_length=500, null=True, verbose_name='Описание')
+    personal_foto = models.ImageField(upload_to='foto/', verbose_name='Фотография')
     biography = models.CharField(max_length=500, null=True, verbose_name='Биография')
     masterpiece = models.CharField(max_length=500, null=True, verbose_name='Лучшие работы')
     person_link = models.URLField(max_length=500, null=True, default=None)
